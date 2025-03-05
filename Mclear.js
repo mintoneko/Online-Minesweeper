@@ -1,4 +1,5 @@
 ﻿var $ = function (o) { return document.getElementById(o); }
+// 相当于给 document.getElementById 起了一个简写别名，函数名称就是$
 
 var canvas = $("canvas");
 var context = canvas.getContext("2d");
@@ -72,7 +73,7 @@ function setWidth(width, height) {
 //初始化
 function initMian() {
     //网格
-    canGrid=null;
+    canGrid = null;
     //方块
     squGrid = null;
     //方块列表
@@ -80,7 +81,7 @@ function initMian() {
     //临时坐标
     coorRecord = null;
     //发现的地雷数
-     mineNum_Seek = 0;
+    mineNum_Seek = 0;
     //已标记数
     yetSign = 0;
     //地雷数
@@ -479,7 +480,7 @@ function GameOver(num) {
         $('text').style.display = 'block';
         $('Difficu').style.display = 'none';
         $('text').getElementsByTagName('img')[0].src = 'images/defeat.gif';
-        $('text').getElementsByTagName('p')[0].innerHTML = '呀！踩到炸弹啦！<br />啊~~~';
+        $('text').getElementsByTagName('p')[0].innerHTML = '呀！踩到炸弹啦！<br />下次更细心哦~';
         $('butt').innerHTML = '再来一次！';
     } else if (num == 1) {
         $('text').style.display = 'block';
@@ -490,4 +491,3 @@ function GameOver(num) {
     }
     $('hint').className = 'animati2';
 }
-

@@ -11,4 +11,4 @@ var imageId = 0;//当前加载的图像ID
             loadImag();
         }
     }
-})()
+})();
